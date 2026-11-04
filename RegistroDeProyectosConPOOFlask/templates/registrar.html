@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block titulo %}Registrar proyecto{% endblock %}
+
+{% block contenido %}
+    <h1>Registro de un nuevo proyecto</h1>
+    <form method="POST">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" required><br>
+        
+        <label for="Fecha">Fecha:</label>
+        <input type="date" id="Fecha" name="Fecha" required><br>
+        
+        <label for="Hora">Hora:</label>
+        <input type="time" id="Hora" name="Hora" required><br>
+        
+        <label for="Lugar">Lugar:</label>
+        <input type="text" id="Lugar" name="Lugar" required><br>
+        
+        <label for="Responsable">Responsable:</label>
+        <input type="text" id="Responsable" name="Responsable" required><br>
+        
+        <button type="submit">Registrar proyecto</button>
+    </form>
+    <a class="boton" href="/proyectos">Ver proyectos</a>
+{% endblock %}

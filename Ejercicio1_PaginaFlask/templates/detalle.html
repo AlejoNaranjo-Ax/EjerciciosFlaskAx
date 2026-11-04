@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block titulo %}{{ libro[1] }}{% endblock %}
+{% block contenido %}
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">{{ libro[1] }}</h3>
+        <p class="card-text"><b>Autor:</b> {{ libro[2] }}</p>
+        <p class="card-text"><b>Edición:</b> {{ libro[3] }}</p>
+        <p class="card-text"><b>Año:</b> {{ libro[4] }}</p>
+        <p class="card-text"><b>Editorial:</b> {{ libro[5] }}</p>
+        <p class="card-text"><b>No. de páginas:</b> {{ libro[6] }}</p>
+        <a href="{{ url_for('libros') }}" class="btn btn-secondary">Regresar</a>
+    </div>
+</div>
+{% endblock %}

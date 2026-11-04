@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block titulo %}Inicio{% endblock %}
+{% block contenido %}
+<div class="p-4 bg-success text-white rounded">
+    <h1>Bienvenida a la Biblioteca</h1>
+    <p>Página web hecha con Flask: rutas, templates y base de datos MySQL.</p>
+    <a href="{{ url_for('libros') }}" class="btn btn-light">Ver libros</a>
+</div>
+{% endblock %}

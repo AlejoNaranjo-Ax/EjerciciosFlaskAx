@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block titulo %}Editar proyecto{% endblock %}
+
+{% block contenido %}
+    <h1>Editar datos del proyecto</h1>
+    <h2>{{ proyecto.Nombre }}</h2>
+
+    <form method="POST">
+        <label for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" name="Nombre" value="{{ proyecto.Nombre }}" required><br>
+
+        <label for="Fecha">Fecha:</label>
+        <input type="date" id="Fecha" name="Fecha" value="{{ proyecto.Fecha }}" required><br>
+
+        <label for="Hora">Hora:</label>
+        <input type="time" id="Hora" name="Hora" value="{{ proyecto.Hora }}" required><br>
+
+        <label for="Lugar">Lugar:</label>
+        <input type="text" id="Lugar" name="Lugar" value="{{ proyecto.Lugar }}" required><br>
+
+        <label for="Responsable">Responsable:</label>
+        <input type="text" id="Responsable" name="Responsable" value="{{ proyecto.Responsable }}" required><br>
+
+        <button type="submit">Guardar cambios</button>
+    </form>
+
+    <a class="boton" href="/proyectos">Cancelar</a>
+{% endblock %}
